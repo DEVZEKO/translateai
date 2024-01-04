@@ -4,6 +4,7 @@ const outputText = document.getElementById('output-text');
 const translateButton = document.getElementById('translate-button');
 const nightModeToggle = document.getElementById('night-mode-toggle');
 const languageSelect = document.getElementById('language-select');
+const apiKey = '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';
 
 translateButton.addEventListener('click', async () => {
     console.log("Click");
@@ -42,10 +43,11 @@ async function translateText(text, targetLanguage) {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${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}`,
+                    'Authorization': `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({
-                    model: 'gpt-3.5-turbo-0301', //Needed for CogSmart API key that won't support GPT4 :(
+                    model: 'gpt-4',
+                    //model: 'gpt-3.5-turbo-0301', //Needed for CogSmart API key that won't support GPT4 :(
                     messages: [{ role: 'user', content: prompt }],
                     temperature: 1.0,
                     top_p: 0.7,
