@@ -46,8 +46,7 @@ async function translateText(text, targetLanguage) {
                     'Authorization': `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({
-                    model: 'gpt-4',
-                    //model: 'gpt-3.5-turbo-0301', //Needed for CogSmart API key that won't support GPT4 :(
+                    model: 'gpt-3.5-turbo-0301', //Needed for CogSmart API key that won't support GPT4 :(
                     messages: [{ role: 'user', content: prompt }],
                     temperature: 1.0,
                     top_p: 0.7,
