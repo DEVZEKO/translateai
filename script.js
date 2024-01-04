@@ -4,7 +4,7 @@ const outputText = document.getElementById('output-text');
 const translateButton = document.getElementById('translate-button');
 const nightModeToggle = document.getElementById('night-mode-toggle');
 const languageSelect = document.getElementById('language-select');
-const apiKey = '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';
+const apiKey = 'هنا ال api بتاعك';
 
 translateButton.addEventListener('click', async () => {
     console.log("Click");
